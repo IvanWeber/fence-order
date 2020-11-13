@@ -128,6 +128,8 @@ html {
 }
 
 .order-form__sum {
+    display: flex;
+    flex-direction: row;
     margin-top: 30px;
     margin-left: 102px;
 }

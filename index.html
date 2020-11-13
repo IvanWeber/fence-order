@@ -14,23 +14,23 @@
 
                     <p class="order-form__length-par">Длина забора</p>
                     <div class="order-form__length-wrapper">
-                        <input class="order-form__item order-form__length-input" type="number">
+                        <input class="order-form__item order-form__length-input" type="number" value="0">
                         <p class="order-form__meters-par">метров</p>
                     </div>
 
                     <p class="order-form__height-par">Высота забора</p>
                     <div class="order-form__height-wrapper">
-                        <input class="order-form__item order-form__height-input" type="number">
+                        <input class="order-form__item order-form__height-input" type="number" value="0">
                         <p class="order-form__meters-par">метров</p>
                     </div>
 
                     <p class="order-form__material-par">Материал забора</p>
                     <!-- <input class="order-form__item order-form__material-input" type="text"> -->
                     <select class="order-form__item order-form__material-input">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
+                        <option value="decking">Профнастил 400 Р за м²</option>
+                        <option value="modules">Модули 500 Р за м²</option>
+                        <option value="concrete">Бетон 700 Р за м²</option>
+                        <option value="grid">Сетка 200 Р за м²</option>
                     </select>
 
                     <div class="mounting-wrapper">
@@ -38,10 +38,11 @@
                         <label class="order-form__mounting-label" for="is-mounting-needed">Нужен монтаж</label>
                     </div>
 
-                    <p class="order-form__sum">Сумма заказа: 0 ₽</p>
+                    <p class="order-form__sum">Сумма заказа: <span class="order-form__sum-number">0</span> ₽</p>
                     <input class="order-form__item order-form__submit-input" type="submit" value="Далее">
                 </form>
         </section>
     </div>
 </body>
+<script src="js/fence-cost-order/fence-cost-order.js"></script>
 </html>

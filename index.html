@@ -9,13 +9,38 @@
 <body>
     <div class="wrapper">
         <section class="order">
-            <div class="order-form">
-                <form action="">
-                    <input type="text">
-                    <input type="text">
-                    <input type="text">
+                <form class="order__order-form order-form" action="">
+                    <p class="order-form__describer"><b class="order-form__describer-content">Заказать забор</b></p>
+
+                    <p class="order-form__length-par">Длина забора</p>
+                    <div class="order-form__length-wrapper">
+                        <input class="order-form__item order-form__length-input" type="number">
+                        <p class="order-form__meters-par">метров</p>
+                    </div>
+
+                    <p class="order-form__height-par">Высота забора</p>
+                    <div class="order-form__height-wrapper">
+                        <input class="order-form__item order-form__height-input" type="number">
+                        <p class="order-form__meters-par">метров</p>
+                    </div>
+
+                    <p class="order-form__material-par">Материал забора</p>
+                    <!-- <input class="order-form__item order-form__material-input" type="text"> -->
+                    <select class="order-form__item order-form__material-input">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+
+                    <div class="mounting-wrapper">
+                        <input class="order-form__item order-form__mounting-input" type="checkbox" name="is-mounting-needed">
+                        <label class="order-form__mounting-label" for="is-mounting-needed">Нужен монтаж</label>
+                    </div>
+
+                    <p class="order-form__sum">Сумма заказа: 0 ₽</p>
+                    <input class="order-form__item order-form__submit-input" type="submit" value="Далее">
                 </form>
-            </div>
         </section>
     </div>
 </body>

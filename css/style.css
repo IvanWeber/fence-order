@@ -1,3 +1,17 @@
+/* open-sans-regular - latin_cyrillic */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/open-sans-v18-latin_cyrillic-regular.eot'); /* IE9 Compat Modes */
+    src: local('Open Sans Regular'), local('OpenSans-Regular'),
+         url('../fonts/open-sans-v18-latin_cyrillic-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/open-sans-v18-latin_cyrillic-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/open-sans-v18-latin_cyrillic-regular.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/open-sans-v18-latin_cyrillic-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/open-sans-v18-latin_cyrillic-regular.svg#OpenSans') format('svg'); /* Legacy iOS */
+  }
+
 html {
     box-sizing: border-box;
     margin: 0;
@@ -10,7 +24,7 @@ html {
     box-sizing: inherit;
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Open Sans', Arial, sans-serif;
     word-wrap: break-word;
 }
 
@@ -20,9 +34,107 @@ html {
 }
 
 .order {
+    display: flex;
+    align-items: flex-start;
     background-image: url('../img/bg.png');
     min-height: 850px;
-    width: 768px;
+    min-width: 768px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.order-form {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 490px;
+    min-height: 645px;
+    margin-top: 107px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 40px;
+}
+
+.order-form__describer {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.order-form__describer-content {
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.order-form__item {
+    background: linear-gradient(to top, #F8F8F8 100%, #F3F3F3 0%, #F2F2F2 100%);
+    border: 1px solid #D7D7D7;
+    border-radius: 3px;
+}
+
+.order-form__length-par {
+    margin-top: 30px;
+    margin-left: 102px;
+}
+
+.order-form__height-par {
+    margin-top: 30px;
+    margin-left: 102px;
+}
+
+.order-form__length-input,
+.order-form__height-input {
+    width: 230px;
+    height: 50px;
+    margin-top: 14px;
+}
+
+.order-form__meters-par {
+    margin-top: 25px;
+    margin-left: 14px;
+}
+
+.order-form__material-par {
+    margin-top: 30px;
+    margin-left: 102px;
+}
+
+.order-form__material-input {
+    margin-top: 14px;
+    margin-left: 102px;
+    width: 319px;
+    height: 50px;
+}
+
+.mounting-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.order-form__mounting-input {
+    margin-top: 30px;
+    margin-left: 102px;
+}
+
+.order-form__mounting-label {
+    margin-top: 24px;
+    margin-left: 10px;
+}
+
+.order-form__length-wrapper,
+.order-form__height-wrapper {
+    display: flex;
+    flex-direction: row;
+    margin-left: 102px;
+}
+
+.order-form__sum {
+    margin-top: 30px;
+    margin-left: 102px;
+}
+
+.order-form__submit-input {
+    margin-top: 30px;
+    margin-left: 102px;
+    width: 150px;
+    height: 50px;
 }

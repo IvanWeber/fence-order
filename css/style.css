@@ -43,6 +43,17 @@ html {
     margin-right: auto;
 }
 
+.order__order-feedback-form {
+    display: flex;
+    /* flex-direction: column; */
+    /* background-color: white; */
+    /* width: 490px; */
+    /* min-height: 645px; */
+    /* margin-top: 107px; */
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .order-form {
     display: flex;
     flex-direction: column;
@@ -71,13 +82,20 @@ html {
     border-radius: 3px;
 }
 
-.order-form__length-par {
+.order-form__length-label {
     margin-top: 30px;
     margin-left: 102px;
 }
 
-.order-form__height-par {
+.order-form__height-label {
     margin-top: 30px;
+    margin-left: 102px;
+}
+
+.order-form__length-wrapper,
+.order-form__height-wrapper {
+    display: flex;
+    flex-direction: row;
     margin-left: 102px;
 }
 
@@ -86,6 +104,29 @@ html {
     width: 230px;
     height: 50px;
     margin-top: 14px;
+}
+
+.order-form__length-input_invalid,
+.order-form__height-input_invalid {
+    border: 1px solid #C98E99;
+}
+
+.order-form__length-label_invalid:after {
+    content: 'Неверно заполнено поле';
+    color: #C98E99;
+    font-size: 13px;
+    position: relative;
+    top: 85px;
+    right: 108px;
+}
+
+.order-form__height-label_invalid:after {
+    content: 'Неверно заполнено поле';
+    color: #C98E99;
+    font-size: 13px;
+    position: relative;
+    top: 85px;
+    right: 115px;
 }
 
 .order-form__meters-par {
@@ -120,13 +161,6 @@ html {
     margin-left: 10px;
 }
 
-.order-form__length-wrapper,
-.order-form__height-wrapper {
-    display: flex;
-    flex-direction: row;
-    margin-left: 102px;
-}
-
 .order-form__sum {
     display: flex;
     flex-direction: row;
@@ -134,9 +168,24 @@ html {
     margin-left: 102px;
 }
 
-.order-form__submit-input {
+.order-form__next-button {
     margin-top: 30px;
     margin-left: 102px;
     width: 150px;
     height: 50px;
+}
+
+/*feedback-form*/
+
+.feedback-form {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 490px;
+    min-height: 645px;
+    margin-top: 107px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 40px;
+    /* display: none; */
 }

@@ -9,20 +9,20 @@
 <body>
     <div class="wrapper">
         <section class="order">
-                <form class="order__order-feedback-form order-feedback-form" action="">
+                <form class="order__order-feedback-form order-feedback-form" method="post" action="" id="ajax_form">
 
                     <div class="order__order-form order-form">
                         <p class="order-form__describer"><b class="order-form__describer-content">Заказать забор</b></p>
     
                         <label class="order-form__length-label" for="length-input">Длина забора</label>
                         <div class="order-form__length-wrapper">
-                            <input class="order-form__item order-form__length-input" type="number" value="0" name="length-input">
+                            <input class="order-form__item order-form__length-input" type="number" value="0" name="length-input" required>
                             <p class="order-form__meters-par">метров</p>
                         </div>
     
                         <label class="order-form__height-label" for="height-input">Высота забора</label>
                         <div class="order-form__height-wrapper">
-                            <input class="order-form__item order-form__height-input" type="number" value="0">
+                            <input class="order-form__item order-form__height-input" type="number" value="0" required>
                             <p class="order-form__meters-par">метров</p>
                         </div>
     
@@ -48,13 +48,13 @@
                         <p class="feedback-form_describer"><b class="feedback-form__describer-content">Пожалуйста, представьтесь</b></p>
     
                         <label class="feedback-form__name-label" for="name-input">Ваше имя</label>
-                        <input class="feedback-form__item feedback-form__name-input" type="text" name="name-input">
+                        <input class="feedback-form__item feedback-form__name-input" type="text" name="name-input" required>
     
                         <label class="feedback-form__email-label" for="email-input">Электронная почта</label>
-                        <input class="feedback-form__item feedback-form__email-input" type="email">
+                        <input class="feedback-form__item feedback-form__email-input" type="email" required>
     
                         <label class="feedback-form__phone-label" for="email-input">Телефон</label>
-                        <input class="feedback-form__item feedback-form__phone-input" type="tel">
+                        <input class="feedback-form__item feedback-form__phone-input" type="tel" required>
 
                         <p class="feedback-form__bottom-describer">Вы укомплектовали забор длинной <span class="feedback-form__length-number"></span> метров и высотой <span class="feedback-form__height-number"></span> метра из материала профнастил на сумму <span class="feedback-form__sum-number"></span> ₽</p>
 
@@ -66,6 +66,8 @@
         </section>
     </div>
 
+    <script src="js/jquery/jquery-3.5.1.min.js"></script>
+    <script src="js/ajax.js"></script>
     <script src="js/fence-cost-order/constants.js"></script>
     <script src="js/fence-cost-order/checks.js"></script>
     <script src="js/fence-cost-order/validation.js"></script>

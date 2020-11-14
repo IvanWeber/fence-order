@@ -44,7 +44,22 @@
                         <button class="order-form__item order-form__next-button" type="button" disabled>Далее</button>
                     </div>
 
-                    <div class="order__feedback-form feedback-form" action="" style="display: none"></div>
+                    <div class="order__feedback-form feedback-form" action="" style="display: none">
+                        <p class="feedback-form_describer"><b class="feedback-form__describer-content">Пожалуйста, представьтесь</b></p>
+    
+                        <label class="feedback-form__name-label" for="name-input">Ваше имя</label>
+                        <input class="feedback-form__item feedback-form__name-input" type="text" name="name-input">
+    
+                        <label class="feedback-form__email-label" for="email-input">Электронная почта</label>
+                        <input class="feedback-form__item feedback-form__email-input" type="email">
+    
+                        <label class="feedback-form__phone-label" for="email-input">Телефон</label>
+                        <input class="feedback-form__item feedback-form__phone-input" type="tel">
+
+                        <p class="feedback-form__bottom-describer">Вы укомплектовали забор длинной <span class="feedback-form__length-number"></span> метров и высотой <span class="feedback-form__height-number"></span> метра из материала профнастил на сумму <span class="feedback-form__sum-number"></span> ₽</p>
+
+                        <input type="submit" value="Отправить" class="feedback-form__submit-button">
+                    </div>
 
                 </form>
 

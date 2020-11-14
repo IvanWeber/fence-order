@@ -189,3 +189,81 @@ html {
     padding-top: 40px;
     /* display: none; */
 }
+
+.feedback-form_describer {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.feedback-form__describer-content {
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.feedback-form__item {
+    background: linear-gradient(to top, #F8F8F8 100%, #F3F3F3 0%, #F2F2F2 100%);
+    border: 1px solid #D7D7D7;
+    border-radius: 3px;
+}
+
+.feedback-form__name-label {
+    margin-top: 30px;
+    margin-left: 102px;
+    margin-left: 102px;
+}
+
+.feedback-form__email-label {
+    margin-top: 30px;
+    margin-left: 102px;
+    margin-left: 102px;
+}
+
+.feedback-form__phone-label {
+    margin-top: 30px;
+    margin-left: 102px;
+    margin-left: 102px;
+}
+
+.feedback-form__name-input,
+.feedback-form__email-input,
+.feedback-form__phone-input {
+    width: 230px;
+    height: 50px;
+    margin-top: 14px;
+    margin-left: 102px;
+}
+
+.feedback-form__bottom-describer {
+    margin-top: 30px;
+    margin-left: 102px;
+}
+
+.feedback-form__submit-button {
+    margin-top: 30px;
+    margin-left: 102px;
+    width: 150px;
+    height: 50px;
+}
+
+/* .order-form__length-input_invalid,
+.order-form__height-input_invalid {
+    border: 1px solid #C98E99;
+}
+
+.order-form__length-label_invalid:after {
+    content: 'Неверно заполнено поле';
+    color: #C98E99;
+    font-size: 13px;
+    position: relative;
+    top: 85px;
+    right: 108px;
+}
+
+.order-form__height-label_invalid:after {
+    content: 'Неверно заполнено поле';
+    color: #C98E99;
+    font-size: 13px;
+    position: relative;
+    top: 85px;
+    right: 115px;
+} */

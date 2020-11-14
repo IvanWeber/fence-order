@@ -5,7 +5,7 @@
     window.validation = {
         initiateCheckOnChangeNumberElementOfForm: (element, checks) => {
             element.setCustomValidity('');
-            var commentaryElementChangeHandler = function () {.
+            var commentaryElementChangeHandler = function () {
               element.setCustomValidity('');
       
               checks.forEach(function (check) {

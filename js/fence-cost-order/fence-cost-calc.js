@@ -130,7 +130,6 @@
     const clickSendButtonHandler = () => {
         if (typeof nameInput.value === 'string' && typeof emailInput.value === 'string' && typeof phoneInput.value === 'string') {
             feedbackForm.style.display = 'none';
-            feedbackForm.style.display = 'flex';
             nameLabel.classList.remove ('feedback-form__name-label_invalid');
             emailLabel.classList.remove ('feedback-form__email-label_invalid');
             phoneLabel.classList.remove ('feedback-form__phone-label_invalid');     

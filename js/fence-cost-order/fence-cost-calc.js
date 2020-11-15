@@ -4,6 +4,7 @@
 
     const orderForm = document.querySelector('.order__order-form');
     const feedbackForm = document.querySelector('.feedback-form');
+
     const lengthLabel = orderForm.querySelector('.order-form__length-label');
     const heightLabel = orderForm.querySelector('.order-form__height-label');
     const lengthInput = orderForm.querySelector('.order-form__length-input');
@@ -13,9 +14,27 @@
     const sumNumber = orderForm.querySelector('.order-form__sum-number');
     const nextButton = orderForm.querySelector('.order-form__next-button');
 
-    const isFilled = {
+    const nameLabel = feedbackForm.querySelector('.feedback-form__name-label');
+    const emailLabel = feedbackForm.querySelector('.feedback-form__email-label');
+    const phoneLabel = feedbackForm.querySelector('.feedback-form__phone-label');
+    const nameInput = feedbackForm.querySelector('.feedback-form__name-input'); 
+    const emailInput = feedbackForm.querySelector('.feedback-form__email-input'); 
+    const phoneInput = feedbackForm.querySelector('.feedback-form__phone-input'); 
+    const sendButton = feedbackForm.querySelector('.feedback__submit-button');
+
+    const lengthNumber = feedbackForm.querySelector('.feedback-form__length-number');
+    const heightNumber = feedbackForm.querySelector('.feedback-form__height-number');
+    const feedbackSumNumber = feedbackForm.querySelector('.feedback-form__sum-number');
+
+    const isFilledOrder = {
         lengthInput: false,
         heightInput: false
+    }
+
+    const isFilledFeedback = {
+        nameInput: false,
+        emailInput: false,
+        phoneInput: false
     }
 
     const inputHandler = () => {
@@ -36,17 +55,17 @@
     }
 
     const inputLengthHandler = () => {
-        isFilled.lengthInput = true;
+        isFilledOrder.lengthInput = true;
         inputHandler();
-        if (isFilled.lengthInput === true && isFilled.heightInput === true) {
+        if (isFilledOrder.lengthInput === true && isFilledOrder.heightInput === true) {
             nextButton.disabled = false;
         }
     }
 
     const inputHeightHandler = () => {
-        isFilled.heightInput = true;
+        isFilledOrder.heightInput = true;
         inputHandler();
-        if (isFilled.lengthInput === true && isFilled.heightInput === true) {
+        if (isFilledOrder.lengthInput === true && isFilledOrder.heightInput === true) {
             nextButton.disabled = false;
         }
     }
@@ -64,11 +83,20 @@
     const clickNextButtonHandler = () => {
         if (lengthInput.value > 0 && heightInput.value > 0) {
             orderForm.style.display = 'none';
-            console.log(feedbackForm);
             feedbackForm.style.display = 'flex';
-            console.log(feedbackForm);
             lengthLabel.classList.remove ('order-form__length-label_invalid');  
-            heightLabel.classList.remove ('order-form__height-label_invalid');     
+            heightLabel.classList.remove ('order-form__height-label_invalid');
+            lengthInput.classList.remove ('order-form__length-input_invalid'); 
+            heightInput.classList.remove ('order-form__height-input_invalid');
+            
+            lengthNumber.innerHTML = lengthInput.value;
+            heightNumber.innerHTML = heightInput.value;
+
+            if () {
+                
+            }
+            feedbackSumNumber.innerHTML = 
+
         }
         
         if (lengthInput.value <= 0) { 
@@ -79,6 +107,54 @@
         if (heightInput.value <= 0) {
             heightInput.classList.add ('order-form__height-input_invalid');
             heightLabel.classList.add ('order-form__height-label_invalid');      
+        }
+    }
+
+    const inputNameHandler = () => {
+        isFilledFeedback.nameInput = true;
+        if (isFilledFeedback.nameInput === true && isFilledFeedback.emailInput === true && isFilledFeedback.phoneInput === true) {
+            sendButton.disabled = false;
+        }
+    }
+
+    const inputEmailHandler = () => {
+        isFilledFeedback.emailInput = true;
+        if (isFilledFeedback.nameInput === true && isFilledFeedback.emailInput === true && isFilledFeedback.phoneInput === true) {
+            sendButton.disabled = false;
+        }
+    }
+
+    const inputPhoneHandler = () => {
+        isFilledFeedback.phoneInput = true;
+        if (isFilledFeedback.nameInput === true && isFilledFeedback.emailInput === true && isFilledFeedback.phoneInput === true) {
+            sendButton.disabled = false;
+        }
+    }
+
+    const clickSendButtonHandler = () => {
+        console.log('test');
+        console.log(typeof nameInput.value);
+        if (typeof nameInput.value === 'string' && typeof emailInput.value === 'string' && typeof phoneInput.value === 'string') {
+            feedbackForm.style.display = 'none';
+            feedbackForm.style.display = 'flex';
+            nameLabel.classList.remove ('feedback-form__name-label_invalid');
+            emailLabel.classList.remove ('feedback-form__email-label_invalid');
+            phoneLabel.classList.remove ('feedback-form__phone-label_invalid');     
+        }
+        
+        if (typeof nameInput.value !== 'string' || nameInput.value === '') { 
+            nameLabel.classList.add('feedback-form__name-label_invalid');
+            nameInput.classList.add('feedback-form__name-input_invalid');   
+        }
+        
+        if (typeof emailInput.value !== 'string' || emailInput.value === '') {
+            emailLabel.classList.add ('feedback-form__email-label_invalid');
+            emailInput.classList.add('feedback-form__email-input_invalid');          
+        }
+        
+        if (typeof phoneInput.value !== 'string' || phoneInput.value === '') {
+            phoneLabel.classList.add ('feedback-form__phone-label_invalid'); 
+            phoneInput.classList.add('feedback-form__phone-input_invalid');  
         }
     }
 
@@ -94,7 +170,13 @@
 
     nextButton.addEventListener('click', clickNextButtonHandler);
 
-    window.validation.initiateCheckOnChangeNumberElementOfForm(lengthInput, window.checks.numberInputCheck);
-    window.validation.initiateCheckOnChangeNumberElementOfForm(heightInput, window.checks.numberInputCheck);
+    nameInput.addEventListener('input', inputNameHandler);
+    emailInput.addEventListener('input', inputEmailHandler);
+    phoneInput.addEventListener('input', inputPhoneHandler);
+
+    sendButton.addEventListener('click', clickSendButtonHandler);
+
+    // window.validation.initiateCheckOnChangeNumberElementOfForm(lengthInput, window.checks.numberInputCheck);
+    // window.validation.initiateCheckOnChangeNumberElementOfForm(heightInput, window.checks.numberInputCheck);
 
 })();

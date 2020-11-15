@@ -91,11 +91,7 @@
             
             lengthNumber.innerHTML = lengthInput.value;
             heightNumber.innerHTML = heightInput.value;
-
-            if () {
-                
-            }
-            feedbackSumNumber.innerHTML = 
+            feedbackSumNumber.innerHTML = sumNumber.innerHTML;
 
         }
         
@@ -132,8 +128,6 @@
     }
 
     const clickSendButtonHandler = () => {
-        console.log('test');
-        console.log(typeof nameInput.value);
         if (typeof nameInput.value === 'string' && typeof emailInput.value === 'string' && typeof phoneInput.value === 'string') {
             feedbackForm.style.display = 'none';
             feedbackForm.style.display = 'flex';

@@ -304,6 +304,7 @@ html {
 
 
 #ajax-result-form {
+    display: none;
     background-color: #FFFFFF;
     width: 490px;
     min-height: 330px;

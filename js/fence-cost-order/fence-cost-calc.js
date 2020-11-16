@@ -26,6 +26,8 @@
     const heightNumber = feedbackForm.querySelector('.feedback-form__height-number');
     const feedbackSumNumber = feedbackForm.querySelector('.feedback-form__sum-number');
 
+    const ajaxResultSection = document.querySelector('#ajax-result-form');
+
     const isFilledOrder = {
         lengthInput: false,
         heightInput: false
@@ -128,14 +130,15 @@
     }
 
     const clickSendButtonHandler = () => {
-        if (typeof nameInput.value === 'string' && typeof emailInput.value === 'string' && typeof phoneInput.value === 'string') {
+        if (typeof nameInput.value === 'string' && nameInput.value !== '' && typeof emailInput.value === 'string' && emailInput.value !== '' && typeof phoneInput.value === 'string' && phoneInput.value !== '') {
             feedbackForm.style.display = 'none';
+            ajaxResultSection.style.display = 'flex';
             nameLabel.classList.remove ('feedback-form__name-label_invalid');
             emailLabel.classList.remove ('feedback-form__email-label_invalid');
             phoneLabel.classList.remove ('feedback-form__phone-label_invalid');     
         }
         
-        if (typeof nameInput.value !== 'string' || nameInput.value === '') { 
+        if (typeof nameInput.value !== 'string' || nameInput.value === '') { gi
             nameLabel.classList.add('feedback-form__name-label_invalid');
             nameInput.classList.add('feedback-form__name-input_invalid');   
         }

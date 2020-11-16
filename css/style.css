@@ -169,10 +169,31 @@ html {
 }
 
 .order-form__next-button {
+    background-image: url(../img/next-button-enabled.png);
     margin-top: 30px;
     margin-left: 102px;
-    width: 150px;
+    width: 155px;
     height: 50px;
+    border: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.order-form__next-button:disabled {
+    background-image: url(../img/next-button-disabled.png);
+}
+
+.order-form__next-button:disabled:hover {
+    background-image: url(../img/next-button-disabled.png);
+}
+
+.order-form__next-button:hover {
+    background-image: url(../img/next-button-hover.png);
+}
+
+.order-form__next-button:active {
+    background-image: url(../img/next-button-pressed.png);
 }
 
 /*feedback-form*/
@@ -275,8 +296,28 @@ html {
 .feedback-form__submit-button {
     margin-top: 30px;
     margin-left: 102px;
-    width: 150px;
+    width: 230px;
     height: 50px;
+    border-radius: 6px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    background: linear-gradient(to top, #4892EC 100%, #2F79D4 100%);
+}
+
+.feedback-form__submit-button:disabled {
+    background: linear-gradient(to top, #818387 100%, #696B6F 100%);
+}
+
+.feedback-form__submit-button:disabled:hover {
+    background: linear-gradient(to top, #818387 100%, #696B6F 100%);
+}
+
+.feedback-form__submit-button:hover {
+    background-color: #3E8FF2;
+}
+
+.feedback-form__submit-button:active {
+    background-color: #256FCA;
 }
 
 /* .order-form__length-input_invalid,

@@ -28,6 +28,26 @@
 
     const ajaxResultSection = document.querySelector('#ajax-result-form');
 
+    //buttons
+
+    const backButton = feedbackForm.querySelector('.feedback-form__back-button');
+    const closeButton = ajaxResultSection.querySelector('.ajax-result-form__close-button');
+
+    const clickBackButtonHandler = () => {
+        orderForm.style.display = 'flex';
+        feedbackForm.style.display = 'none';
+    }
+
+    backButton.addEventListener('click', clickBackButtonHandler);
+
+    const clickCloseButtonHandler = () => {
+        ajaxResultSection.style.display = 'none';
+    }
+
+    closeButton.addEventListener('click', clickCloseButtonHandler)
+
+    //buttons
+
     const isFilledOrder = {
         lengthInput: false,
         heightInput: false
@@ -138,7 +158,7 @@
             phoneLabel.classList.remove ('feedback-form__phone-label_invalid');     
         }
         
-        if (typeof nameInput.value !== 'string' || nameInput.value === '') { gi
+        if (typeof nameInput.value !== 'string' || nameInput.value === '') { 
             nameLabel.classList.add('feedback-form__name-label_invalid');
             nameInput.classList.add('feedback-form__name-input_invalid');   
         }

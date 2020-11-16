@@ -198,6 +198,22 @@ html {
 
 /*feedback-form*/
 
+.feedback-form__back-button {
+    color: #FFFFFF;
+    background-color: transparent;
+    font-size: 13px;
+    position: relative;
+    bottom: 62px;
+    width: 90px;
+    border: none;
+    cursor: pointer;
+}
+
+.feedback-form__back-button:before {
+    content: url(../img/back-arrow.png);
+    margin-right: 5px;
+}
+
 .feedback-form {
     display: flex;
     flex-direction: column;
@@ -372,4 +388,16 @@ html {
     font-size: 18px;
     text-align: center;
     margin-top: 20px;
+}
+
+.ajax-result-form__close-button {
+    color: #FFFFFF;
+    background-color: transparent;
+    font-size: 13px;
+    position: relative;
+    bottom: 62px;
+    width: 90px;
+    border: none;
+    cursor: pointer;
+    left: 410px;
 }

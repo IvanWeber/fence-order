@@ -12,6 +12,7 @@
                 <form class="order__order-feedback-form order-feedback-form" method="post" action="" id="ajax_form">
 
                     <div class="order__order-form order-form">
+
                         <p class="order-form__describer"><b class="order-form__describer-content">Заказать забор</b></p>
     
                         <label class="order-form__length-label" for="length-input">Длина забора</label>
@@ -45,6 +46,9 @@
                     </div>
 
                     <div class="order__feedback-form feedback-form" action="" style="display: none">
+
+                        <button class="feedback-form__back-button" type="button">Вернуться</button>
+
                         <p class="feedback-form_describer"><b class="feedback-form__describer-content">Пожалуйста, представьтесь</b></p>
     
                         <label class="feedback-form__name-label" for="name-input">Ваше имя</label>
@@ -60,7 +64,9 @@
 
                         <input class="feedback-form__submit-button feedback__submit-button" type="submit" id="btn" value="Отправить" disabled/>
                     </div>
-                    <div id="ajax-result-form"></div>
+                    <div class="ajax-result-form" id="ajax-result-form">
+                        <button class="ajax-result-form__close-button">Закрыть</button>
+                    </div>
 
                 </form>
 

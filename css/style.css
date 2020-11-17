@@ -211,6 +211,14 @@ html {
     margin-left: 102px;
 }
 
+.order-form__sum-number {
+    color: #A10031;
+}
+
+.order-form__sum-number-rubles {
+    color: #A10031;
+}
+
 .order-form__next-button {
     background-image: url(../img/next-button-enabled.png);
     margin-top: 30px;
@@ -385,6 +393,14 @@ html {
 .feedback-form__bottom-describer {
     margin-top: 30px;
     margin-left: 102px;
+}
+
+.feedback-form__sum-number {
+    color: #A10031;
+}
+
+.feedback-form__sum-number-rubles {
+    color: #A10031;
 }
 
 .feedback-form__submit-button {

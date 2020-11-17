@@ -17,19 +17,19 @@
     
                         <label class="order-form__length-label" for="length-input">Длина забора</label>
                         <div class="order-form__length-wrapper">
-                            <input class="order-form__item order-form__length-input" type="number" value="0" name="length-input" required>
+                            <input class="order-form__item order-form__length-input" type="number" value="0" id="length-input" required>
                             <p class="order-form__meters-par">метров</p>
                         </div>
     
                         <label class="order-form__height-label" for="height-input">Высота забора</label>
                         <div class="order-form__height-wrapper">
-                            <input class="order-form__item order-form__height-input" type="number" value="0" required>
+                            <input class="order-form__item order-form__height-input" type="number" value="0" id="height-input" required>
                             <p class="order-form__meters-par">метров</p>
                         </div>
     
-                        <p class="order-form__material-par">Материал забора</p>
+                        <label class="order-form__material-label" for="materials">Материал забора</label>
                         <!-- <input class="order-form__item order-form__material-input" type="text"> -->
-                        <select class="order-form__item order-form__material-input" required>
+                        <select class="order-form__item order-form__material-input" id="materials" required>
                             <option value="decking">Профнастил 400 Р за м²</option>
                             <option value="modules">Модули 500 Р за м²</option>
                             <option value="concrete">Бетон 700 Р за м²</option>
@@ -52,13 +52,13 @@
                         <p class="feedback-form_describer"><b class="feedback-form__describer-content">Пожалуйста, представьтесь</b></p>
     
                         <label class="feedback-form__name-label" for="name-input">Ваше имя</label>
-                        <input class="feedback-form__item feedback-form__name-input" type="text" name="name-input" required>
+                        <input class="feedback-form__item feedback-form__name-input" type="text" id="name-input" required>
     
                         <label class="feedback-form__email-label" for="email-input">Электронная почта</label>
-                        <input class="feedback-form__item feedback-form__email-input" type="email" name="email-input" required>
+                        <input class="feedback-form__item feedback-form__email-input" type="email" id="email-input" required>
     
                         <label class="feedback-form__phone-label" for="phone-input">Телефон</label>
-                        <input class="feedback-form__item feedback-form__phone-input" type="tel" name="phone-input" required>
+                        <input class="feedback-form__item feedback-form__phone-input" type="tel" id="phone-input" required>
 
                         <p class="feedback-form__bottom-describer">Вы укомплектовали забор длинной <span class="feedback-form__length-number"></span> метров и высотой <span class="feedback-form__height-number"></span> метра из материала профнастил на сумму <span class="feedback-form__sum-number"></span> ₽</p>
 

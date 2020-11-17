@@ -106,6 +106,20 @@ html {
     margin-top: 14px;
 }
 
+.order-form__length-label_ok:after {
+    content: url(../img/check-mark.png);
+    position: relative;
+    left: 226px;
+    top: 48px;
+}
+
+.order-form__height-label_ok:after {
+    content: url(../img/check-mark.png);
+    position: relative;
+    left: 220px;
+    top: 48px;
+}
+
 .order-form__length-input_invalid,
 .order-form__height-input_invalid {
     border: 1px solid #C98E99;
@@ -134,9 +148,16 @@ html {
     margin-left: 14px;
 }
 
-.order-form__material-par {
+.order-form__material-label {
     margin-top: 30px;
     margin-left: 102px;
+}
+
+.order-form__material-label_ok:after {
+    content: url(../img/check-mark.png);
+    position: relative;
+    left: 203px;
+    top: 48px;
 }
 
 .order-form__material-input {
@@ -247,6 +268,20 @@ html {
     margin-right: auto;
     padding-top: 40px;
     /* display: none; */
+    transform: translate(0px, 0px);
+    animation-name: feedback-form;
+}
+
+@keyframes feedback-form {
+  0% {
+    transform: translate(0px, -2000px);
+  }
+  80% {
+    transform: translate(0px, -100px);
+  }
+  100% {
+    transform: translate(0px, -200px);
+  }
 }
 
 .feedback-form_describer {
@@ -271,16 +306,37 @@ html {
     margin-left: 102px;
 }
 
+.feedback-form__name-label_ok:after {
+    content: url(../img/check-mark.png);
+    position: relative;
+    left: 177px;
+    top: 54px;
+}
+
 .feedback-form__email-label {
     margin-top: 30px;
     margin-left: 102px;
     margin-left: 102px;
 }
 
+.feedback-form__email-label_ok:after {
+    content: url(../img/check-mark.png);
+    position: relative;
+    left: 106px;
+    top: 54px;
+}
+
 .feedback-form__phone-label {
     margin-top: 30px;
     margin-left: 102px;
     margin-left: 102px;
+}
+
+.feedback-form__phone-label_ok:after {
+    content: url(../img/check-mark.png);
+    position: relative;
+    left: 191px;
+    top: 54px;
 }
 
 .feedback-form__name-input_invalid,

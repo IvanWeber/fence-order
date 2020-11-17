@@ -9,6 +9,7 @@
     const heightLabel = orderForm.querySelector('.order-form__height-label');
     const lengthInput = orderForm.querySelector('.order-form__length-input');
     const heightInput = orderForm.querySelector('.order-form__height-input');
+    const materialLabel = orderForm.querySelector('.order-form__material-label');
     const materialInput = orderForm.querySelector('.order-form__material-input');
     const mountingInput = orderForm.querySelector('.order-form__mounting-input');
     const sumNumber = orderForm.querySelector('.order-form__sum-number');
@@ -110,6 +111,7 @@
             heightLabel.classList.remove ('order-form__height-label_invalid');
             lengthInput.classList.remove ('order-form__length-input_invalid'); 
             heightInput.classList.remove ('order-form__height-input_invalid');
+            materialLabel.classList.add ('order-form__material-label_ok');
             
             lengthNumber.innerHTML = lengthInput.value;
             heightNumber.innerHTML = heightInput.value;
@@ -119,12 +121,22 @@
         
         if (lengthInput.value <= 0) { 
             lengthInput.classList.add ('order-form__length-input_invalid'); 
-            lengthLabel.classList.add ('order-form__length-label_invalid');     
+            lengthLabel.classList.add ('order-form__length-label_invalid');
+            lengthLabel.classList.remove ('order-form__length-label_ok');
+        } else {
+            lengthInput.classList.remove ('order-form__length-input_invalid'); 
+            lengthLabel.classList.remove ('order-form__length-label_invalid');
+            lengthLabel.classList.add ('order-form__length-label_ok');
         }
         
         if (heightInput.value <= 0) {
             heightInput.classList.add ('order-form__height-input_invalid');
-            heightLabel.classList.add ('order-form__height-label_invalid');      
+            heightLabel.classList.add ('order-form__height-label_invalid');   
+            heightLabel.classList.remove ('order-form__length-label_ok');   
+        } else {
+            heightInput.classList.remove ('order-form__height-input_invalid');
+            heightLabel.classList.remove ('order-form__height-label_invalid');   
+            heightLabel.classList.add ('order-form__length-label_ok');   
         }
     }
 
@@ -155,22 +167,40 @@
             ajaxResultSection.style.display = 'flex';
             nameLabel.classList.remove ('feedback-form__name-label_invalid');
             emailLabel.classList.remove ('feedback-form__email-label_invalid');
-            phoneLabel.classList.remove ('feedback-form__phone-label_invalid');     
+            phoneLabel.classList.remove ('feedback-form__phone-label_invalid');  
+            nameLabel.classList.add('feedback-form__name-label_ok');     
+            emailLabel.classList.add('feedback-form__email-label_ok');  
+            phoneLabel.classList.add('feedback-form__phone-label_ok');       
         }
         
         if (typeof nameInput.value !== 'string' || nameInput.value === '') { 
             nameLabel.classList.add('feedback-form__name-label_invalid');
-            nameInput.classList.add('feedback-form__name-input_invalid');   
+            nameInput.classList.add('feedback-form__name-input_invalid');
+            nameLabel.classList.remove('feedback-form__name-label_ok');   
+        } else {
+            nameLabel.classList.remove('feedback-form__name-label_invalid');
+            nameInput.classList.remove('feedback-form__name-input_invalid');
+            nameLabel.classList.add('feedback-form__name-label_ok');  
         }
         
         if (typeof emailInput.value !== 'string' || emailInput.value === '') {
             emailLabel.classList.add ('feedback-form__email-label_invalid');
-            emailInput.classList.add('feedback-form__email-input_invalid');          
+            emailInput.classList.add('feedback-form__email-input_invalid');
+            emailLabel.classList.remove('feedback-form__email-label_ok');          
+        } else {
+            emailLabel.classList.remove ('feedback-form__email-label_invalid');
+            emailInput.classList.remove('feedback-form__email-input_invalid');
+            emailLabel.classList.add('feedback-form__email-label_ok');       
         }
         
         if (typeof phoneInput.value !== 'string' || phoneInput.value === '') {
             phoneLabel.classList.add ('feedback-form__phone-label_invalid'); 
             phoneInput.classList.add('feedback-form__phone-input_invalid');  
+            phoneLabel.classList.remove('feedback-form__phone-label_ok');  
+        } else {
+            phoneLabel.classList.remove ('feedback-form__phone-label_invalid'); 
+            phoneInput.classList.remove('feedback-form__phone-input_invalid');  
+            phoneLabel.classList.add('feedback-form__phone-label_ok');  
         }
     }
 
